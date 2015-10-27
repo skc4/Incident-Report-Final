@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navigationModel
+  ns = "http://schemas.android.com?import=com.android.tools.idea.editors.navigation.model.*">
+  <locations  
+    class = "java.util.ArrayList">
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "mobileproject.incidentreport.Login"/>
+      <point      
+        x = "60"      
+        y = "144"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "mobileproject.incidentreport.SignupActivity"/>
+      <point      
+        x = "1220"      
+        y = "148"/>
+    </statePointEntry>
+  </locations>
+</navigationModel>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/Moo/GitHub/IncidentReport/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="/Users/Moo/GitHub/IncidentReport/app/build/intermediates/pre-dexed/debug/classes-e286f68140b8b67b420895790837663502465fec.jar" />
+    </item>
+    <item
+        jar="/Users/Moo/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/7.0.1/d5d13ea991eab0252e3710e5df3d6a9d4b21d461/butterknife-7.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
+        <dex dex="/Users/Moo/GitHub/IncidentReport/app/build/intermediates/pre-dexed/debug/butterknife-7.0.1-079ce67f086bdcf9758b3ac6495f69b12ae57544.jar" />
+    </item>
+    <item
+        jar="/Users/Moo/GitHub/IncidentReport/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="/Users/Moo/GitHub/IncidentReport/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1-ac1638c7b501c8f2412be42524de99f69d793811.jar" />
+    </item>
+    <item
+        jar="/Users/Moo/GitHub/IncidentReport/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/Users/Moo/GitHub/IncidentReport/app/build/intermediates/pre-dexed/debug/classes-3bc56d3825b0e69ba31bfa7ccabc316fdb285dc4.jar" />
+    </item>
+    <item
+        jar="/Users/Moo/GitHub/IncidentReport/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e5c61a3169221a89654ffcaaed47bba51cf071ad">
+        <dex dex="/Users/Moo/GitHub/IncidentReport/app/build/intermediates/pre-dexed/debug/classes-817d9b71d89381c7702137075497904c92720aad.jar" />
+    </item>
+    <item
+        jar="/Users/Moo/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="/Users/Moo/GitHub/IncidentReport/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1-141ba4c481892c9cc3df5d542272452d600f0304.jar" />
+    </item>
+
+</items>
