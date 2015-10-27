@@ -14,12 +14,18 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 public class Login extends AppCompatActivity {
 
     private static final String TAG = "Login";
@@ -34,7 +40,11 @@ public class Login extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+<<<<<<< HEAD
         setContentView(R.layout.content_login);
+=======
+        setContentView(R.layout.activity_login);
+>>>>>>> origin/master
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -53,6 +63,7 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //begin signing up
+<<<<<<< HEAD
                 Intent intent = new Intent(getApplicationContext(), SignupActivity.class);
                 startActivityForResult(intent, REQUEST_SIGNUP);
             }
@@ -61,6 +72,9 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Login.this, SignupActivity.class));
+=======
+                Intent intent = new Intent(getApplicationContext(), SignupActivity.class); startActivityForResult(intent, REQUEST_SIGNUP);
+>>>>>>> origin/master
             }
         });
     }

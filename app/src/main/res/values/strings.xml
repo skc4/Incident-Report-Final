@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">IncidentReport</string>
     <string name="action_settings">Settings</string>
+<<<<<<< HEAD
     <string name="title_activity_signup">SignupActivity</string>
+=======
+>>>>>>> origin/master
 </resources>
