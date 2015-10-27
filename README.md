@@ -10,4 +10,3 @@ CSC 4998 Mobile Project
 - Officer Receives Report Layout - Ken
 - Map - Zacch
 - Photo / Server - Brian
-- 
