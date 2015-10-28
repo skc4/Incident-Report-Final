@@ -15,8 +15,8 @@
 
         <ImageView android:src="@drawable/logo"
             android:layout_width="wrap_content"
-            android:layout_height="120dp"
-            android:layout_marginBottom="24dp"
+            android:layout_height="150dp"
+            android:layout_marginBottom="20dp"
             android:layout_gravity="center_horizontal" />
 
         <!--  Username Label -->
@@ -74,7 +74,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
-            android:text="First responder?"
+            android:text="Are you an officer?"
             android:gravity="center"
             android:textSize="16dip"
             android:textColor="@color/primary_darker" />

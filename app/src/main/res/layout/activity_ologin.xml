@@ -13,10 +13,10 @@
         android:paddingLeft="24dp"
         android:paddingRight="24dp">
 
-        <ImageView android:src="@drawable/logo"
+        <ImageView android:src="@drawable/ologo"
             android:layout_width="wrap_content"
-            android:layout_height="120dp"
-            android:layout_marginBottom="24dp"
+            android:layout_height="170dp"
+            android:layout_marginBottom="17dp"
             android:layout_gravity="center_horizontal" />
 
         <!--  Username Label -->
@@ -65,7 +65,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
-            android:text="Not a first responder?"
+            android:text="Not an officer?"
             android:gravity="center"
             android:textSize="16dip"
             android:textColor="@color/secondary_darker" />
