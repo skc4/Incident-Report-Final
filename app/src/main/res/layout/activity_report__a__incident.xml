@@ -28,6 +28,7 @@
         android:layout_height="wrap_content"
         android:text="@string/incident_picture_button_hint"
         android:id="@+id/incident_camera"
+        android:onClick="takePicture"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
