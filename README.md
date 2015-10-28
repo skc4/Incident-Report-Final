@@ -3,7 +3,7 @@ CSC 4998 Mobile Project
 
 ##Things to do
 
-- [ ] Login User/Officer - Ken
+- [x] Login User/Officer - Ken
     - Please start off from this current branch, trash other clones from before
     - I used butterknife more info here: [butterknife](http://jakewharton.github.io/butterknife)
     - Butterknife is already implemented in the gradle so you can use **@Bind**
