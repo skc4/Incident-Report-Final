@@ -12,8 +12,8 @@ CSC 4998 Mobile Project
         - app/res/values/colors.xml  <- Currently chosen colors, shades of Red 
     - Also, do you guys know if there is a way for us to use one login screen and direct to different screens               (off/civ) depending on the usernames? Just wondering if we really need two different login screens
 - [ ] Menu - Zacch
-- [ ] User Menu to Submit Report - Rhett
-- [ ] Incident Report / Push Notification - Rhett
+- [ ] User Menu to Submit Report - Rett
+- [ ] Incident Report / Push Notification - Rett
 - [ ] Officer Receives Report Layout - Ken
 - [ ] Map - Zacch
 - [ ] Photo / Server - Brian
