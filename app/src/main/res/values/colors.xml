@@ -2,8 +2,12 @@
 <resources>
     <color name="primary">#E43F3F</color>
     <color name="primary_dark">#E12929</color>
-    <color name="primary_darker">#CC1D1D</color>
+    <color name="primary_darker">#b41919</color>
     <color name="accent">#FFFFFF</color>
+
+    <color name="secondary">#3f70e4</color>
+    <color name="secondary_dark">#2a50ac</color>
+    <color name="secondary_darker">#0d2f80</color>
 
     <color name="black">#000000</color>
     <color name="jet">#222222</color>

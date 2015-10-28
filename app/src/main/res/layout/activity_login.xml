@@ -68,7 +68,16 @@
             android:text="Create a new account"
             android:gravity="center"
             android:textSize="16dip"
-            android:textColor="@color/accent" />
+            android:textColor="@color/primary_darker" />
+
+        <TextView android:id="@+id/link_forward"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="First responder?"
+            android:gravity="center"
+            android:textSize="16dip"
+            android:textColor="@color/primary_darker" />
 
     </LinearLayout>
 </ScrollView>

@@ -22,7 +22,9 @@ public class LoginActivity extends AppCompatActivity {
     @Bind(R.id.input_username) EditText _usernameText;
     @Bind(R.id.input_password) EditText _passwordText;
     @Bind(R.id.btn_login) Button _loginButton;
+    @Bind(R.id.link_forward) TextView _forwardLink;
     @Bind(R.id.link_signup) TextView _signupLink;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -47,6 +49,16 @@ public class LoginActivity extends AppCompatActivity {
                 startActivityForResult(intent, REQUEST_SIGNUP);
             }
         });
+
+        _forwardLink.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // Go to officer login page
+                Intent intent = new Intent(getApplicationContext(), OLoginActivity.class);
+                startActivityForResult(intent, REQUEST_SIGNUP);
+            }
+        });
     }
 
     public void login() {
@@ -65,7 +77,7 @@ public class LoginActivity extends AppCompatActivity {
         progressDialog.setMessage("Authenticating...");
         progressDialog.show();
 
-        String email = _usernameText.getText().toString();
+        String username = _usernameText.getText().toString();
         String password = _passwordText.getText().toString();
 
         // TODO: Implement your own authentication logic here.
