@@ -33,6 +33,30 @@
             android:label="@string/title_activity_ologin"
             android:theme="@style/AppTheme.NoActionBar1" >
         </activity>
+        <activity
+            android:name=".User_Menu"
+            android:label="@string/title_activity_user__menu"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="mobileproject.incidentreport.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Officer_Menu"
+            android:label="@string/title_activity_officer__menu"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="mobileproject.incidentreport.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Report_A_Incident"
+            android:label="@string/title_activity_report__a__incident"
+            android:parentActivityName=".User_Menu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="mobileproject.incidentreport.User_Menu" />
+        </activity>
     </application>
 
 </manifest>

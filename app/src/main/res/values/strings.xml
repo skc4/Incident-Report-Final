@@ -4,4 +4,19 @@
     <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_signup">SignupActivity</string>
     <string name="title_activity_ologin">OLoginActivity</string>
+    <string name="title_activity_user__menu">User_Menu</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_officer__menu">Officer_Menu</string>
+    <string name="title_activity_report__a__incident">Report_A_Incident</string>
+    <string name="incident_description_hint">Enter a description of the incident</string>
+    <string name="incident_picture_button_hint">Take A Picture!</string>
+    <string name="incident_submit_button_text">Submit Incident</string>
+    <string-array name="incident_cato">
+        <item>Homocide</item>
+        <item>Robbery</item>
+        <item>Battery</item>
+        <item>Fire</item>
+        <item>Sexual Assault</item>
+    </string-array>
 </resources>

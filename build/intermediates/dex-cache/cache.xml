@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/libs/internal_impl-23.1.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
+        <dex dex="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.0-c9bbcf6224ff8f7b4193469cf0d791b13c330965.jar" />
+    </item>
+    <item
+        jar="/Users/rettwalker/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/7.0.1/d5d13ea991eab0252e3710e5df3d6a9d4b21d461/butterknife-7.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
+        <dex dex="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/pre-dexed/debug/butterknife-7.0.1-05d4e679504ccd86ab42c373bb36ecf4ca103952.jar" />
+    </item>
+    <item
+        jar="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
+        <dex dex="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/pre-dexed/debug/classes-7908ef1da8469490975d9ee7529cf1557e478c2c.jar" />
+    </item>
+    <item
+        jar="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="19026d31f5d3ae868db81319671a642be5fbba08">
+        <dex dex="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/pre-dexed/debug/classes-5ba89366b6de9fe0224bd7c1093437f790145773.jar" />
+    </item>
+    <item
+        jar="/Users/rettwalker/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.0/support-annotations-23.1.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
+        <dex dex="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.0-233357d573788f98f80c97bcc3e18a0c56733bd6.jar" />
+    </item>
+    <item
+        jar="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
+        <dex dex="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/pre-dexed/debug/classes-0eb08f45dbb65f4212d5f282d83a672320245624.jar" />
+    </item>
+    <item
+        jar="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3f151e49c316a5ab2c065969a3b3b55ef9b393fc">
+        <dex dex="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/pre-dexed/debug/classes-2a2d85db6eef4aab7b8f4714cc76f2708972082c.jar" />
+    </item>
+
+</items>

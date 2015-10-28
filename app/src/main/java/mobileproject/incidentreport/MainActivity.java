@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
 
+
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,5 +54,13 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+    public void toUserMenu(View view){
+        Intent intent = new Intent(this, User_Menu.class);
+        startActivity(intent);
+    }
+    public void toOfficerMenu(View view){
+        Intent intent = new Intent(this, Officer_Menu.class);
+        startActivity(intent);
     }
 }
