@@ -15,21 +15,20 @@ import android.widget.Toast;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class LoginActivity extends AppCompatActivity {
-    private static final String TAG = "LoginActivity";
+public class OLoginActivity extends AppCompatActivity {
+    private static final String TAG = "OLoginActivity";
     private static final int REQUEST_SIGNUP = 0;
 
     @Bind(R.id.input_username) EditText _usernameText;
     @Bind(R.id.input_password) EditText _passwordText;
     @Bind(R.id.btn_login) Button _loginButton;
-    @Bind(R.id.link_forward) TextView _forwardLink;
+    @Bind(R.id.link_back) TextView _backLink;
     @Bind(R.id.link_signup) TextView _signupLink;
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_ologin);
         ButterKnife.bind(this);
 
         _loginButton.setOnClickListener(new View.OnClickListener() {
@@ -40,23 +39,26 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        _signupLink.setOnClickListener(new View.OnClickListener() {
+        _backLink.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                // Start the Signup activity
-                Intent intent = new Intent(getApplicationContext(), SignupActivity.class);
+                // Go back to normal login page
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivityForResult(intent, REQUEST_SIGNUP);
             }
         });
 
-        _forwardLink.setOnClickListener(new View.OnClickListener() {
+        _signupLink.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                // Go to officer login page
-                Intent intent = new Intent(getApplicationContext(), OLoginActivity.class);
+                Toast.makeText(getBaseContext(), "Please call 800-911-9111", Toast.LENGTH_LONG).show();
+
+                /*// Go back to normal login page
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivityForResult(intent, REQUEST_SIGNUP);
+                */
             }
         });
     }
@@ -71,7 +73,7 @@ public class LoginActivity extends AppCompatActivity {
 
         _loginButton.setEnabled(false);
 
-        final ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this,
+        final ProgressDialog progressDialog = new ProgressDialog(OLoginActivity.this,
                 R.style.AppTheme_AppBarOverlay);
         progressDialog.setIndeterminate(true);
         progressDialog.setMessage("Authenticating...");

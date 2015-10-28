@@ -28,6 +28,11 @@
             android:label="@string/title_activity_signup"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
+        <activity
+            android:name=".OLoginActivity"
+            android:label="@string/title_activity_ologin"
+            android:theme="@style/AppTheme.NoActionBar1" >
+        </activity>
     </application>
 
 </manifest>
