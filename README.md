@@ -10,8 +10,8 @@ CSC 4998 Mobile Project
     - Any ideas for the logo? and Colors?
         - app/res/values/colors.xml  <- Currently chosen colors, shades of Red for civ and Blue for off 
 - [ ] Menu - Zacch
-- [ ] User Menu to Submit Report - Rhett
-- [ ] Incident Report / Push Notification - Rhett
+- [ ] User Menu to Submit Report - Rett
+- [ ] Incident Report / Push Notification - Rett
 - [ ] Officer Receives Report Layout - Ken
 - [ ] Map - Zacch
 - [ ] Photo / Server - Brian
