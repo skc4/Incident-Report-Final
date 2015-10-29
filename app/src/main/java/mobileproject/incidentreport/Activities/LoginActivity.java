@@ -1,4 +1,4 @@
-package mobileproject.incidentreport;
+package mobileproject.incidentreport.Activities;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import mobileproject.incidentreport.R;
 
 public class LoginActivity extends AppCompatActivity {
     private static final String TAG = "LoginActivity";

@@ -9,6 +9,7 @@ CSC 4998 Mobile Project
     - Butterknife is already implemented in the gradle so you can use **@Bind**
     - Any ideas for the logo? and Colors?
         - app/res/values/colors.xml  <- Currently chosen colors, shades of Red for civ and Blue for off 
+    - All that i think is left for the log in is the validation and database stuff
 - [ ] Menu - Zacch
 - [ ] User Menu to Submit Report - Rett
 - [ ] Incident Report / Push Notification - Rett
