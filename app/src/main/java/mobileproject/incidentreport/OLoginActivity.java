@@ -45,7 +45,8 @@ public class OLoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Go back to normal login page
                 Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
-                startActivityForResult(intent, REQUEST_SIGNUP);
+                startActivity(intent);
+                finish();
             }
         });
 
@@ -116,6 +117,8 @@ public class OLoginActivity extends AppCompatActivity {
 
     public void onLoginSuccess() {
         _loginButton.setEnabled(true);
+        Intent intent = new Intent(this,Officer_Menu.class);
+        startActivity(intent);
         finish();
     }
 

@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
 
+        finish();
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
