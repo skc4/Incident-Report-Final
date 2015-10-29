@@ -12,6 +12,8 @@
     <string name="incident_description_hint">Enter a description of the incident</string>
     <string name="incident_picture_button_hint">Take A Picture!</string>
     <string name="incident_submit_button_text">Submit Incident</string>
+    <string name="incident_lat">Incident Lat</string>
+    <string name="incident_long">Incident Long</string>
     <string-array name="incident_cato">
         <item>Homocide</item>
         <item>Robbery</item>

@@ -2,53 +2,172 @@
 <items version="2" >
 
     <item
-        jar="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/libs/internal_impl-23.1.0.jar"
+        jar="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/8.1.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
-        <dex dex="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.0-c9bbcf6224ff8f7b4193469cf0d791b13c330965.jar" />
+        sha1="997773777cf3904c11d6764fe3b7668538220e49">
+        <dex dex="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/pre-dexed/debug/classes-320b48f5f56bd30d10c3db6b051dd24afbb5de15.jar" />
     </item>
     <item
-        jar="/Users/rettwalker/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/7.0.1/d5d13ea991eab0252e3710e5df3d6a9d4b21d461/butterknife-7.0.1.jar"
+        jar="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/8.1.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
-        <dex dex="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/pre-dexed/debug/butterknife-7.0.1-05d4e679504ccd86ab42c373bb36ecf4ca103952.jar" />
+        sha1="3b05c18f60969ecc2ba49c0409c4b96be2d9cb0c">
+        <dex dex="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/pre-dexed/debug/classes-d747a47691f57b90f02096919d92ce4c4ee74e6d.jar" />
     </item>
     <item
-        jar="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/jars/classes.jar"
+        jar="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/8.1.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
-        <dex dex="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/pre-dexed/debug/classes-7908ef1da8469490975d9ee7529cf1557e478c2c.jar" />
+        sha1="3c729e6d76a36c5dc27e6a4c4009296f49eaa88a">
+        <dex dex="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/pre-dexed/debug/classes-0be1c54f0bdfb820057c10007282747e5363bbff.jar" />
     </item>
     <item
-        jar="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/jars/classes.jar"
+        jar="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/8.1.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="19026d31f5d3ae868db81319671a642be5fbba08">
-        <dex dex="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/pre-dexed/debug/classes-5ba89366b6de9fe0224bd7c1093437f790145773.jar" />
+        sha1="041d93cf0533591c29d1d7263b2fa114dbfb20bd">
+        <dex dex="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/pre-dexed/debug/classes-078295cc2fd2506118a720da25e773709a1bbfeb.jar" />
     </item>
     <item
-        jar="/Users/rettwalker/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.0/support-annotations-23.1.0.jar"
+        jar="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/jars/libs/internal_impl-22.2.0.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
-        <dex dex="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.0-233357d573788f98f80c97bcc3e18a0c56733bd6.jar" />
+        sha1="0632f06970823b7e3436f649bfa65b47035c91d0">
+        <dex dex="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.0-1db2d1c01b246eb97713de5e95c12ae96eafa42a.jar" />
     </item>
     <item
-        jar="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/classes.jar"
+        jar="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
-        <dex dex="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/pre-dexed/debug/classes-0eb08f45dbb65f4212d5f282d83a672320245624.jar" />
+        sha1="d0dda274b703dd9c5bb056867649d22b4171ae7d">
+        <dex dex="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/pre-dexed/debug/classes-60fe97c6f43129f696bc4230753708676d17f5cb.jar" />
     </item>
     <item
-        jar="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.0/jars/classes.jar"
+        jar="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/8.1.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="3f151e49c316a5ab2c065969a3b3b55ef9b393fc">
-        <dex dex="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/pre-dexed/debug/classes-2a2d85db6eef4aab7b8f4714cc76f2708972082c.jar" />
+        sha1="d294caf562c4c678b2ef351662a0ca6f1a4d06c0">
+        <dex dex="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/pre-dexed/debug/classes-d5579552bde913f71cb1db28da49b553b9812a66.jar" />
+    </item>
+    <item
+        jar="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3aed37c38c56679602255dd72ef356da5d327cda">
+        <dex dex="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/pre-dexed/debug/classes-ea12353410c11b35eb8237a51488f1480cec1336.jar" />
+    </item>
+    <item
+        jar="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d61920aba361832a9545a43fa8c9453eb02f18f7">
+        <dex dex="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/pre-dexed/debug/classes-78c2205b6566bf5dcfe1307551c53363657239e6.jar" />
+    </item>
+    <item
+        jar="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="b92002cb2f0e11a226ac5bac6dff1dc2a9d0b774">
+        <dex dex="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/pre-dexed/debug/classes-74894099073eb7184e94c271dd2f372c4d584c6a.jar" />
+    </item>
+    <item
+        jar="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3178362320bcf51228835b60ff978efadfd1f783">
+        <dex dex="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/pre-dexed/debug/classes-eb89d181cbe11b6ce0d4450b9c5ecfd6540c7c8b.jar" />
+    </item>
+    <item
+        jar="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="82825756edeeb3b56b15e73b2edd56e93da5a444">
+        <dex dex="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/pre-dexed/debug/classes-0f9e6df88e508ba8a1bcc4a79da683f51e4d832f.jar" />
+    </item>
+    <item
+        jar="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="dcf8c83c3dead00a6c4fe313e95f7aaca20dc641">
+        <dex dex="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/pre-dexed/debug/classes-8e61c0863071b97163c7239cb1a502a543823f14.jar" />
+    </item>
+    <item
+        jar="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="993834cb17d07d51b92db89d2c330243592ebf77">
+        <dex dex="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/pre-dexed/debug/classes-6603283d00562ae383a930b70db0a83566bc7c29.jar" />
+    </item>
+    <item
+        jar="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="9cf8c0ef60847621c7ad00b4f78dbfc9daba4af2">
+        <dex dex="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/pre-dexed/debug/classes-706fba0a14e2aed46f5481a09f5605b9b338f0ed.jar" />
+    </item>
+    <item
+        jar="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="2a7e47da654546f9457deb6132364f1bf33a1857">
+        <dex dex="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/pre-dexed/debug/classes-50278913a927cc5db2c3fe2f0c68256dcf059f88.jar" />
+    </item>
+    <item
+        jar="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="97f3b099801a9ad9d70e835b9125273e986eb68d">
+        <dex dex="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/pre-dexed/debug/classes-6f1c373186d9a6dee6134a1bef0f70ca41fd42a8.jar" />
+    </item>
+    <item
+        jar="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="4477ea44f5ec5ad064022a22691732d7638ff197">
+        <dex dex="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/pre-dexed/debug/classes-8ea8b87b52f9d98d12eaf53cffc5d15f2f9a8f87.jar" />
+    </item>
+    <item
+        jar="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="325788a04b436a0bccbc5b4c54cf0f12ebdcbd2d">
+        <dex dex="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/pre-dexed/debug/classes-d14ffc706a31ef69c7450909790808339c597bd7.jar" />
+    </item>
+    <item
+        jar="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-vision/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="17449c47df35c754b257532052f1270c444f7993">
+        <dex dex="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/pre-dexed/debug/classes-08f935f269aced612b024595960ee8ace366fbd0.jar" />
+    </item>
+    <item
+        jar="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d93480da1d303122ee67dc3bc23e6297bdef9951">
+        <dex dex="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/pre-dexed/debug/classes-466eaa10f8c94e72d7f0c70f8e310db2626fa7a4.jar" />
+    </item>
+    <item
+        jar="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="95758a2905669affbffc5ddd262921d375674fad">
+        <dex dex="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/pre-dexed/debug/classes-f93bc632febba3c87aba6f80f511a1c48efc049b.jar" />
+    </item>
+    <item
+        jar="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="dcb5b75baf05d92e61d5706737200ee55949f97b">
+        <dex dex="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/pre-dexed/debug/classes-b4898fffa8f8678feeeafabecd738268e004900c.jar" />
+    </item>
+    <item
+        jar="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="482de223655d06253cc6a4955d653f8994169500">
+        <dex dex="/Users/rettwalker/AndroidStudioProjects/IncidentReport/app/build/intermediates/pre-dexed/debug/classes-64ea14a6b3afa5476eefca9ccae4e1a6d6824bc5.jar" />
     </item>
 
 </items>
