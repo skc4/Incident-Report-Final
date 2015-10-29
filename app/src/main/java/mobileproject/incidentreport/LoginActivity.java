@@ -46,7 +46,8 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Start the Signup activity
                 Intent intent = new Intent(getApplicationContext(), SignupActivity.class);
-                startActivityForResult(intent, REQUEST_SIGNUP);
+                startActivity(intent);
+                finish();
             }
         });
 
@@ -56,7 +57,8 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Go to officer login page
                 Intent intent = new Intent(getApplicationContext(), OLoginActivity.class);
-                startActivityForResult(intent, REQUEST_SIGNUP);
+                startActivity(intent);
+                finish();
             }
         });
     }
@@ -114,6 +116,8 @@ public class LoginActivity extends AppCompatActivity {
 
     public void onLoginSuccess() {
         _loginButton.setEnabled(true);
+        Intent intent = new Intent(this,User_Menu.class);
+        startActivity(intent);
         finish();
     }
 

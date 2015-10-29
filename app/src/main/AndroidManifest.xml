@@ -40,19 +40,11 @@
         </activity>
         <activity
             android:name=".User_Menu"
-            android:label="@string/title_activity_user__menu"
-            android:parentActivityName=".MainActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="mobileproject.incidentreport.MainActivity" />
+            android:label="@string/title_activity_user__menu">
         </activity>
         <activity
             android:name=".Officer_Menu"
-            android:label="@string/title_activity_officer__menu"
-            android:parentActivityName=".MainActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="mobileproject.incidentreport.MainActivity" />
+            android:label="@string/title_activity_officer__menu">
         </activity>
         <activity
             android:name=".Report_A_Incident"
