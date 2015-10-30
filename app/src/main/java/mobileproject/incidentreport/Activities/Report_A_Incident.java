@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 
 import com.google.android.gms.common.ConnectionResult;
@@ -36,6 +37,8 @@ public class Report_A_Incident extends AppCompatActivity implements
     protected LocationRequest mLocationRequest;
     private Uri fileUri;
     private Incident current_incident = new Incident();
+    private static String incident_long;
+    private static String incident_lat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -167,6 +170,8 @@ public class Report_A_Incident extends AppCompatActivity implements
     }
     private void handleNewLocation(Location location) {
         Log.d(TAG, location.toString());
+        incident_lat = String.valueOf(location.getLatitude());
+        incident_long = String.valueOf(location.getLongitude());
         current_incident.setLat(location.getLatitude());
         current_incident.setLongit(location.getLongitude());
     }
@@ -179,5 +184,8 @@ public class Report_A_Incident extends AppCompatActivity implements
     public void reportIncident(View view){
         String description = findViewById(R.id.incident_description).toString();
         current_incident.setDescription(description);
+        Toast all_clear = Toast.makeText(this, "Button Pressed - Lat: "+incident_lat +" Long: "+incident_long, Toast.LENGTH_LONG);
+        all_clear.show();
+        finish();
     }
 }

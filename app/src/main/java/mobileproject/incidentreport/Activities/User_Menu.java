@@ -7,23 +7,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.parse.Parse;
-import com.parse.ParseInstallation;
-import com.parse.ParsePushBroadcastReceiver;
-
 import mobileproject.incidentreport.R;
 
 public class User_Menu extends AppCompatActivity {
 
-    ParsePushBroadcastReceiver incoming;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user__menu);
-        Parse.initialize(this, "Me5CJw5LT408QL8QGUDdXBMHLeahkSfIujqwlkhR", "dlPUdYIwkU3E2nmvJhpvf5LlQWusToPjkX369V77");
-        ParseInstallation.getCurrentInstallation().saveInBackground();
-        incoming = new ParsePushBroadcastReceiver();
 
     }
 

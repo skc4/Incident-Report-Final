@@ -7,8 +7,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.parse.Parse;
-import com.parse.ParsePush;
+
 
 import mobileproject.incidentreport.R;
 
@@ -20,10 +19,6 @@ public class Officer_Menu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_officer__menu);
-        Parse.initialize(this, "Me5CJw5LT408QL8QGUDdXBMHLeahkSfIujqwlkhR", "dlPUdYIwkU3E2nmvJhpvf5LlQWusToPjkX369V77");
-        ParsePush.subscribeInBackground("officers");
-
-
 
     }
 
