@@ -1,4 +1,4 @@
-package mobileproject.incidentreport;
+package mobileproject.incidentreport.Activities;
 
 import android.content.Intent;
 import android.location.Location;
@@ -11,8 +11,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.TextView;
+import android.widget.Toast;
+
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -24,17 +26,19 @@ import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import mobileproject.incidentreport.Entities.Incident;
+import mobileproject.incidentreport.R;
+
 public class Report_A_Incident extends AppCompatActivity implements
         GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener,LocationListener{
     public static final String TAG = Report_A_Incident.class.getSimpleName();
-    private static TextView incident_long;
-    private static TextView incident_lat;
     private static GoogleApiClient mGoogleApiClient;
-    private LocationRequest mLocationRequest;
-    public static final int MEDIA_TYPE_IMAGE = 1;
-    public static final int MEDIA_TYPE_VIDEO = 2;
+    protected LocationRequest mLocationRequest;
     private Uri fileUri;
+    private Incident current_incident = new Incident();
+    private static String incident_long;
+    private static String incident_lat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,9 +55,6 @@ public class Report_A_Incident extends AppCompatActivity implements
                 R.array.incident_cato, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         reportCat.setAdapter(adapter);
-        incident_lat = (TextView)findViewById(R.id.incident_lat);
-        incident_long = (TextView)findViewById(R.id.incident_long);
-
 
     }
 
@@ -88,7 +89,8 @@ public class Report_A_Incident extends AppCompatActivity implements
     private void dispatchTakePictureIntent() {
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         if (intent.resolveActivity(getPackageManager()) != null) {
-            fileUri = getOutputMediaFileUri(MEDIA_TYPE_IMAGE); // create a file to save the image
+            fileUri = getOutputMediaFileUri(); // create a file to save the image
+            current_incident.setFileUri(fileUri);
             Log.d(TAG, "File URI is "+ fileUri);
             intent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri); // set the image file name
             startActivityForResult(intent, REQUEST_IMAGE_CAPTURE);
@@ -123,12 +125,12 @@ public class Report_A_Incident extends AppCompatActivity implements
     }
 
     /** Create a file Uri for saving an image or video */
-    private  Uri getOutputMediaFileUri(int type){
-        return Uri.fromFile(getOutputMediaFile(type));
+    private  Uri getOutputMediaFileUri(){
+        return Uri.fromFile(getOutputMediaFile());
     }
 
     /** Create a File for saving an image or video */
-    private File getOutputMediaFile(int type){
+    private File getOutputMediaFile(){
         // To be safe, you should check that the SDCard is mounted
         // using Environment.getExternalStorageState() before doing this.
 
@@ -147,13 +149,10 @@ public class Report_A_Incident extends AppCompatActivity implements
 
         // Create a media file name
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+        current_incident.setTimestamp(timeStamp);
         File mediaFile;
-        if (type == MEDIA_TYPE_IMAGE){
-            mediaFile = new File(mediaStorageDir.getPath() + File.separator +
-                    "IMG_"+ timeStamp + ".jpg");
-        } else {
-            return null;
-        }
+        mediaFile = new File(mediaStorageDir.getPath() + File.separator + "IMG_"+ timeStamp + ".jpg");
+
 
         return mediaFile;
     }
@@ -171,12 +170,22 @@ public class Report_A_Incident extends AppCompatActivity implements
     }
     private void handleNewLocation(Location location) {
         Log.d(TAG, location.toString());
-        incident_lat.setText(String.valueOf(location.getLatitude()));
-        incident_long.setText(String.valueOf(location.getLongitude()));
+        incident_lat = String.valueOf(location.getLatitude());
+        incident_long = String.valueOf(location.getLongitude());
+        current_incident.setLat(location.getLatitude());
+        current_incident.setLongit(location.getLongitude());
     }
 
     @Override
     public void onLocationChanged(Location location) {
         handleNewLocation(location);
+    }
+
+    public void reportIncident(View view){
+        String description = findViewById(R.id.incident_description).toString();
+        current_incident.setDescription(description);
+        Toast all_clear = Toast.makeText(this, "Button Pressed - Lat: "+incident_lat +" Long: "+incident_long, Toast.LENGTH_LONG);
+        all_clear.show();
+        finish();
     }
 }

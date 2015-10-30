@@ -1,16 +1,25 @@
-package mobileproject.incidentreport;
+package mobileproject.incidentreport.Activities;
+
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
 import android.view.Menu;
 import android.view.MenuItem;
 
+
+
+import mobileproject.incidentreport.R;
+
+
 public class Officer_Menu extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_officer__menu);
+
     }
 
     @Override
@@ -34,4 +43,5 @@ public class Officer_Menu extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 }

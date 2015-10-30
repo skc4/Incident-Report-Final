@@ -1,4 +1,4 @@
-package mobileproject.incidentreport;
+package mobileproject.incidentreport.Activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,12 +7,16 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import mobileproject.incidentreport.R;
+
 public class User_Menu extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user__menu);
+
     }
 
     @Override

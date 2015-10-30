@@ -6,15 +6,30 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <!--
+      IMPORTANT: Change "com.parse.starter.permission.C2D_MESSAGE" in the lines below
+      to match your app's package name + ".permission.C2D_MESSAGE".
+    -->
+    <permission android:protectionLevel="signature"
+        android:name="mobileproject.incidentreport.permission.C2D_MESSAGE" />
+    <uses-permission android:name="mobileproject.incidentreport.permission.C2D_MESSAGE" />
 
     <application
+        android:name=".Incident_Report"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".MainActivity"
+            android:name=".Activities.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
@@ -24,36 +39,54 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LoginActivity"
+            android:name=".Activities.LoginActivity"
             android:label="@string/title_activity_login"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
-            android:name=".SignupActivity"
+            android:name=".Activities.SignupActivity"
             android:label="@string/title_activity_signup"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
-            android:name=".OLoginActivity"
+            android:name=".Activities.OLoginActivity"
             android:label="@string/title_activity_ologin"
             android:theme="@style/AppTheme.NoActionBar1" >
         </activity>
         <activity
-            android:name=".User_Menu"
+            android:name=".Activities.User_Menu"
             android:label="@string/title_activity_user__menu">
         </activity>
         <activity
-            android:name=".Officer_Menu"
+            android:name=".Activities.Officer_Menu"
             android:label="@string/title_activity_officer__menu">
         </activity>
         <activity
-            android:name=".Report_A_Incident"
+            android:name=".Activities.Report_A_Incident"
             android:label="@string/title_activity_report__a__incident"
-            android:parentActivityName=".User_Menu" >
+            android:parentActivityName=".Activities.User_Menu" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="mobileproject.incidentreport.User_Menu" />
+                android:value=".Activities.User_Menu" />
         </activity>
+
+        <service android:name="com.parse.PushService" />
+        <receiver android:name="com.parse.ParsePushBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.parse.push.intent.RECEIVE" />
+                <action android:name="com.parse.push.intent.DELETE" />
+                <action android:name="com.parse.push.intent.OPEN" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.parse.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="mobileproject.incidentreport" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
