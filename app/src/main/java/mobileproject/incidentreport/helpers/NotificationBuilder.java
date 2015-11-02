@@ -29,6 +29,7 @@ public class NotificationBuilder  {
 
         Log.i(TAG,"Incoming Intent = "+intent.getExtras().toString());
 
+        String type = intent.getExtras().getString("type");
 
         PendingIntent resultPendingIntent =
                 PendingIntent.getActivity(
@@ -40,7 +41,8 @@ public class NotificationBuilder  {
 
         NotificationCompat.Builder noteBuilder = new NotificationCompat.Builder(incomingContext);
 
-        noteBuilder.setContentIntent(resultPendingIntent).setContentText(message)
+        noteBuilder.setContentIntent(resultPendingIntent)
+                .setContentText(type)
                 .setContentTitle(title);
 
         NotificationManager noteMan = (NotificationManager) incomingContext
