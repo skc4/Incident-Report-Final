@@ -31,7 +31,7 @@ public class IncidentReportPushReceiver extends ParsePushBroadcastReceiver {
     protected void onPushReceive(Context context, Intent intent) {
         super.onPushReceive(context, intent);
         Log.i(TAG, "Message Received " + intent.getExtras().toString());
-
+/*
         NotificationBuilder notBuilder = new NotificationBuilder(context);
 
         Intent outGoing = new Intent(context,Officer_Menu.class);
@@ -42,7 +42,7 @@ public class IncidentReportPushReceiver extends ParsePushBroadcastReceiver {
 
 
         notBuilder.displayNotification("Alert!!","An Incident Has Occurred, Please Respond!",outGoing);
-
+*/
 
     }
 

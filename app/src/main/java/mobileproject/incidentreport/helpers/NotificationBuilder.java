@@ -46,7 +46,7 @@ public class NotificationBuilder  {
         NotificationManager noteMan = (NotificationManager) incomingContext
                 .getSystemService(Context.NOTIFICATION_SERVICE);
 
-        noteMan.notify(1,noteBuilder.build());
+        noteMan.notify(001,noteBuilder.build());
     }
 
 }
