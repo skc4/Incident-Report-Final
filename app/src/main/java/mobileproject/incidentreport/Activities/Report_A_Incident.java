@@ -11,7 +11,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -21,6 +20,10 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
+import com.parse.ParsePush;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
@@ -181,11 +184,23 @@ public class Report_A_Incident extends AppCompatActivity implements
         handleNewLocation(location);
     }
 
-    public void reportIncident(View view){
+    public void reportIncident(View view) throws JSONException {
         String description = findViewById(R.id.incident_description).toString();
         current_incident.setDescription(description);
-        Toast all_clear = Toast.makeText(this, "Button Pressed - Lat: "+incident_lat +" Long: "+incident_long, Toast.LENGTH_LONG);
+        JSONObject incident = new JSONObject()
+                .put("incident",current_incident)
+                .put("latitude", current_incident.getLat())
+                .put("longitude",current_incident.getLongit())
+                .put("description",current_incident.getDescription())
+                .put("type",current_incident.getType())
+                .put("user",current_incident.getUsername());
+
+        Toast all_clear = Toast.makeText(this, "Incident Reported, Thank you!" , Toast.LENGTH_LONG);
         all_clear.show();
+
+        ParsePush push = new ParsePush();
+        push.setChannel("officers");
+        push.setData(incident);
         finish();
     }
 }

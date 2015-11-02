@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="mobileproject.incidentreport" >
-    <uses-feature android:name="android.hardware.camera"
+
+    <uses-feature
+        android:name="android.hardware.camera"
         android:required="true" />
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -17,8 +20,10 @@
       IMPORTANT: Change "com.parse.starter.permission.C2D_MESSAGE" in the lines below
       to match your app's package name + ".permission.C2D_MESSAGE".
     -->
-    <permission android:protectionLevel="signature"
-        android:name="mobileproject.incidentreport.permission.C2D_MESSAGE" />
+    <permission
+        android:name="mobileproject.incidentreport.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
     <uses-permission android:name="mobileproject.incidentreport.permission.C2D_MESSAGE" />
 
     <application
@@ -55,11 +60,11 @@
         </activity>
         <activity
             android:name=".Activities.User_Menu"
-            android:label="@string/title_activity_user__menu">
+            android:label="@string/title_activity_user__menu" >
         </activity>
         <activity
             android:name=".Activities.Officer_Menu"
-            android:label="@string/title_activity_officer__menu">
+            android:label="@string/title_activity_officer__menu" >
         </activity>
         <activity
             android:name=".Activities.Report_A_Incident"
@@ -71,22 +76,27 @@
         </activity>
 
         <service android:name="com.parse.PushService" />
-        <receiver android:name="com.parse.ParsePushBroadcastReceiver"
-            android:exported="false">
+
+        <receiver
+            android:name=".helpers.IncidentReportPushReceiver"
+            android:exported="false" >
             <intent-filter>
                 <action android:name="com.parse.push.intent.RECEIVE" />
                 <action android:name="com.parse.push.intent.DELETE" />
                 <action android:name="com.parse.push.intent.OPEN" />
             </intent-filter>
         </receiver>
-        <receiver android:name="com.parse.GcmBroadcastReceiver"
-            android:permission="com.google.android.c2dm.permission.SEND">
+        <receiver
+            android:name="com.parse.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
                 <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
                 <category android:name="mobileproject.incidentreport" />
             </intent-filter>
         </receiver>
+
     </application>
 
 </manifest>
