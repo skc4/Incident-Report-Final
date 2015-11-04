@@ -1,5 +1,6 @@
 package mobileproject.incidentreport.helpers;
 
+import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
@@ -9,6 +10,9 @@ import android.util.Log;
 
 
 import mobileproject.incidentreport.Activities.Officer_Menu;
+import mobileproject.incidentreport.R;
+
+import static android.app.Notification.DEFAULT_SOUND;
 
 /**
  * Created by rettwalker on 11/2/15.
@@ -39,11 +43,17 @@ public class NotificationBuilder  {
                         PendingIntent.FLAG_CANCEL_CURRENT
                 );
 
+        NotificationCompat.InboxStyle inboxStyle =
+                new NotificationCompat.InboxStyle();
+
         NotificationCompat.Builder noteBuilder = new NotificationCompat.Builder(incomingContext);
 
-        noteBuilder.setContentIntent(resultPendingIntent)
+        noteBuilder.setSmallIcon(R.drawable.logo)
+                .setContentIntent(resultPendingIntent)
                 .setContentText(type)
-                .setContentTitle(title);
+                .setContentTitle(title)
+                .setAutoCancel(true)
+                .setStyle(inboxStyle);
 
         NotificationManager noteMan = (NotificationManager) incomingContext
                 .getSystemService(Context.NOTIFICATION_SERVICE);

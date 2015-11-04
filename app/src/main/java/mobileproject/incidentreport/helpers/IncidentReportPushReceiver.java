@@ -58,11 +58,6 @@ public class IncidentReportPushReceiver extends ParsePushBroadcastReceiver {
 
     }
 
-    @Override
-    protected Class getActivity(Context context, Intent intent){
-        return Officer_Menu.class;
-    }
-
 
 
 
