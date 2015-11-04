@@ -8,56 +8,56 @@
         class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
         className = "mobileproject.incidentreport.Activities.SignupActivity"/>
       <point      
-        x = "800"      
-        y = "1144"/>
+        x = "480"      
+        y = "1312"/>
     </statePointEntry>
     <statePointEntry>
       <state      
         class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
         className = "mobileproject.incidentreport.Activities.MainActivity"/>
       <point      
-        x = "2128"      
-        y = "212"/>
+        x = "2112"      
+        y = "28"/>
     </statePointEntry>
     <statePointEntry>
       <state      
         class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
         className = "mobileproject.incidentreport.Activities.LoginActivity"/>
       <point      
-        x = "0"      
-        y = "672"/>
+        x = "-40"      
+        y = "376"/>
     </statePointEntry>
     <statePointEntry>
       <state      
         class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
         className = "mobileproject.incidentreport.Activities.User_Menu"/>
       <point      
-        x = "1272"      
-        y = "32"/>
+        x = "1452"      
+        y = "8"/>
     </statePointEntry>
     <statePointEntry>
       <state      
         class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
         className = "mobileproject.incidentreport.Activities.Report_A_Incident"/>
       <point      
-        x = "836"      
-        y = "776"/>
+        x = "1252"      
+        y = "1332"/>
     </statePointEntry>
     <statePointEntry>
       <state      
         class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
         className = "mobileproject.incidentreport.Activities.Officer_Menu"/>
       <point      
-        x = "124"      
-        y = "-16"/>
+        x = "2320"      
+        y = "1548"/>
     </statePointEntry>
     <statePointEntry>
       <state      
         class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
         className = "mobileproject.incidentreport.Activities.OLoginActivity"/>
       <point      
-        x = "668"      
-        y = "136"/>
+        x = "472"      
+        y = "12"/>
     </statePointEntry>
   </locations>
 </navigationModel>
