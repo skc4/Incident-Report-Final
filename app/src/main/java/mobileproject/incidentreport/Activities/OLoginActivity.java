@@ -81,7 +81,7 @@ public class OLoginActivity extends AppCompatActivity {
         progressDialog.setMessage("Authenticating...");
         progressDialog.show();
 
-        String username = _usernameText.getText().toString();
+        final String username = _usernameText.getText().toString();
         String password = _passwordText.getText().toString();
 
         // TODO: Implement your own authentication logic here.
@@ -89,8 +89,11 @@ public class OLoginActivity extends AppCompatActivity {
         new android.os.Handler().postDelayed(
                 new Runnable() {
                     public void run() {
-                        // On complete call either onLoginSuccess or onLoginFailed
-                        onLoginSuccess();
+                        if (username.equalsIgnoreCase("dispatch")) {
+                            onDispatchLoginSuccess();
+                        }else {
+                            onLoginSuccess();
+                        }
                         // onLoginFailed();
                         progressDialog.dismiss();
                     }
@@ -114,6 +117,13 @@ public class OLoginActivity extends AppCompatActivity {
     public void onBackPressed() {
         // Disable going back to the MainActivity
         moveTaskToBack(true);
+    }
+
+    public void onDispatchLoginSuccess(){
+        _loginButton.setEnabled(true);
+        Intent intent = new Intent(this,Dispatch_menu.class);
+        startActivity(intent);
+        finish();
     }
 
     public void onLoginSuccess() {

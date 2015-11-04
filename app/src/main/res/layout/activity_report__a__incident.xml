@@ -1,3 +1,4 @@
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -42,23 +43,5 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:hint="@string/incident_description_hint" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/incident_lat"
-        android:layout_above="@+id/incident_description"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:hint="@string/incident_lat" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/incident_long"
-        android:layout_above="@+id/incident_lat"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:hint="@string/incident_long" />
 
 </RelativeLayout>

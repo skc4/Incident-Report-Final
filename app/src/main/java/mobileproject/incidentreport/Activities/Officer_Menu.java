@@ -1,9 +1,11 @@
 package mobileproject.incidentreport.Activities;
 
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -13,12 +15,17 @@ import mobileproject.incidentreport.R;
 
 
 public class Officer_Menu extends AppCompatActivity {
+    private final String TAG = Officer_Menu.class.getSimpleName();
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_officer__menu);
+        Intent intent = getIntent();
+        if(intent.getExtras() != null){
+            Log.i(TAG,"Received intent = "+intent.getExtras().getString("com.parse.Data"));
+        }
 
     }
 

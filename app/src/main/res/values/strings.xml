@@ -21,4 +21,6 @@
         <item>Fire</item>
         <item>Sexual Assault</item>
     </string-array>
+    <string name="title_activity_display__incident__list">Display_Incident_List</string>
+    <string name="title_activity_dispatch_menu">Dispatch_menu</string>
 </resources>
