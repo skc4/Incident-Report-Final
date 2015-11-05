@@ -6,6 +6,14 @@
     <statePointEntry>
       <state      
         class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "mobileproject.incidentreport.Activities.Dispatch_menu"/>
+      <point      
+        x = "564"      
+        y = "476"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
         className = "mobileproject.incidentreport.Activities.SignupActivity"/>
       <point      
         x = "480"      
