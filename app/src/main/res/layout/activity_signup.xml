@@ -26,11 +26,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp">
-            <EditText android:id="@+id/input_name"
+            <EditText android:id="@+id/input_phonenumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textCapWords"
-                android:hint="Name"
+                android:inputType="phone"
+                android:hint="PhoneNumber"
                 android:textColor="@color/accent"
                 android:textColorHint="@color/aluminum" />
         </android.support.design.widget.TextInputLayout>

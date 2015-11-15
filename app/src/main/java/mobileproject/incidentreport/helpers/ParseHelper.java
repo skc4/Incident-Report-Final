@@ -18,11 +18,13 @@ public class ParseHelper {
         // initializing parse library
         Parse.initialize(context, ConfigApp.PARSE_APPLICATION_ID, ConfigApp.PARSE_CLIENT_KEY);
         ParseInstallation.getCurrentInstallation().saveInBackground();
+        /*
         ParsePush.subscribeInBackground(ConfigApp.PARSE_CHANNEL, new SaveCallback() {
             @Override
             public void done(ParseException e) {
                 Log.e(TAG, "Successfully subscribed to Parse!");
             }
         });
+        */
     }
 }

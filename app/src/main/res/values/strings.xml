@@ -15,12 +15,62 @@
     <string name="incident_lat">Incident Lat</string>
     <string name="incident_long">Incident Long</string>
     <string-array name="incident_cato">
+        <item>Select Category</item>
         <item>Homocide</item>
         <item>Robbery</item>
         <item>Battery</item>
         <item>Fire</item>
         <item>Sexual Assault</item>
+        <item>Drugs</item>git
+    </string-array>
+    <string-array name="categorySpinner">
+        <item>Select Category</item>
+        <item>Homicide</item>
+        <item>Robbery</item>
+        <item>Battery</item>
+        <item>Fire</item>
+        <item>Sexual Assault</item>
+        <item>Drugs</item>
     </string-array>
     <string name="title_activity_display__incident__list">Display_Incident_List</string>
     <string name="title_activity_dispatch_menu">Dispatch_menu</string>
+    <string name="title_activity_incident_map">Map</string>
+    <string name="title_activity_incident_list">IncidentList</string>
+    <string name="title_activity_officer_list">OfficerList</string>
+    <string name="title_activity_un_responded_list">UnRespondedList</string>
+    <string name="all_incident_button">Display All Incidents</string>
+    <string name="unrespond_button">Display Unresponded To Incidents</string>
+    <string name="display_officer_button">Display Officers</string>
+    <string name="title_activity_dispatch_to_officer">DispatchToOfficer</string>
+    <string name="username" />
+    <string name="title_activity_officer__report">Officer_Report</string>
+    <string name="logout">Logout</string>
+    <string name="title_activity_user_account_settings">Account Settings</string>
+    <string name="title_activity_driver_map">Map</string>
+    <string name="title_activity_something">Map</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_officer__gallery">Officer_Gallery</string>
+
+
+    <string-array name="image_ids">
+        <item>@drawable/lambda_1</item>
+        <item>@drawable/lambda_2</item>
+        <item>@drawable/lambda_3</item>
+        <item>@drawable/lambda_4</item>
+        <item>@drawable/lambda_5</item>
+        <item>@drawable/lambda_6</item>
+        <item>@drawable/lambda_7</item>
+        <item>@drawable/lambda_8</item>
+        <item>@drawable/lambda_9</item>
+        <item>@drawable/lambda_1</item>
+        <item>@drawable/lambda_2</item>
+        <item>@drawable/lambda_3</item>
+        <item>@drawable/lambda_4</item>
+        <item>@drawable/lambda_5</item>
+        <item>@drawable/lambda_6</item>
+        <item>@drawable/lambda_7</item>
+        <item>@drawable/lambda_8</item>
+        <item>@drawable/lambda_9</item>
+    </string-array>
+
 </resources>

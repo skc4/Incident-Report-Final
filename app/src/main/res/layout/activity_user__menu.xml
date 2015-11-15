@@ -4,16 +4,51 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@color/oil"
     tools:context="mobileproject.incidentreport.Activities.User_Menu">
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@id/toolbar"
+        android:onClick="showMap"
+        android:background="@drawable/mapicon"
+        android:id="@+id/map_button"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/mapbuttonlabel"
+        android:layout_height="wrap_content"
+        android:text="SHOW MAP"
+        android:textSize="20dp"
+        android:textColor="#fff"
+        android:layout_below="@+id/map_button"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Report"
         android:id="@+id/incident_report_button"
-        android:background="@drawable/incident_button"
+        android:background="@drawable/btn_logo"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:onClick="reportIncident"
         android:textColor="#FFFFFF" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/icidentbuttontext"
+        android:text="REPORT INCIDENT"
+        android:textSize="20sp"
+        android:textColor="#fff"
+        android:layout_above="@+id/incident_report_button"
+        android:layout_centerHorizontal="true" />
+
+    <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_below="@id/icidentbuttontext"-->
+        <!--android:src="@drawable/accent_userscreen"-->
+        <!--/>-->
 
 </RelativeLayout>

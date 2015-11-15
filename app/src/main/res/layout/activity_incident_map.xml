@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+
+    android:orientation="vertical"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="wrap_content"
+    android:layout_height="400dp" android:id="@+id/incidentMap"
+    tools:context="mobileproject.incidentreport.Activities.IncidentMap"
+    android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+            <ImageView
+                android:id="@+id/crimeKey"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/incidentMap"
+                android:src="@drawable/criminal"
+                />
+
+            <TextView
+                android:id="@+id/criminalLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Criminal Marker"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"
+                android:layout_below="@+id/incidentMap"
+                android:layout_toEndOf="@+id/crimeKey"
+                android:layout_toRightOf="@id/crimeKey"/>
+            <ImageView
+                android:id="@+id/youKey"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/crimeKey"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/youmarker"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your location"
+                android:textSize="20sp"
+                android:layout_below="@+id/criminalLabel"
+                android:layout_toRightOf="@+id/youKey"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="10dp"/>
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:id="@+id/categorySpin"
+                android:layout_below="@+id/incidentMap"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@+id/criminalLabel"
+                android:layout_toRightOf="@id/criminalLabel"
+                android:layout_marginTop="15dp"
+                android:background="@android:drawable/btn_dropdown"
+                android:entries="@array/categorySpinner"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

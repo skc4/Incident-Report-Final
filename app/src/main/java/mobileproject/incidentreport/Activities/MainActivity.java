@@ -1,6 +1,8 @@
 package mobileproject.incidentreport.Activities;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -11,18 +13,38 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import mobileproject.incidentreport.R;
+import mobileproject.incidentreport.helpers.ConfigApp;
 
 public class MainActivity extends AppCompatActivity {
+    private static SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        sharedPreferences = this.getSharedPreferences(ConfigApp.USER_LOGIN_PREF, Context.MODE_PRIVATE);
+        Intent intent;
+        if(sharedPreferences.getBoolean("isLoggedIn",false)){
+            if(sharedPreferences.getString("TYPE",null).equals("user")){
+                intent = new Intent(this,User_Menu.class);
 
-        Intent intent = new Intent(this, LoginActivity.class);
+            }else{
+                if(sharedPreferences.getString("TYPE",null).equals("dispatch")){
+                    intent = new Intent(this,IncidentList.class);
+
+                }else{
+                    intent = new Intent(this,Officer_Menu.class);
+                }
+            }
+        }else{
+            intent = new Intent(this, LoginActivity.class);
+        }
         startActivity(intent);
+
+
 
         finish();
 

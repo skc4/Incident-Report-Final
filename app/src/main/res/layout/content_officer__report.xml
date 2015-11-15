@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="mobileproject.incidentreport.Activities.Officer_Report"
+    android:background="@color/secondary">
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="120dp"
+        android:id="@+id/reportDescription"
+        android:background="@color/accent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/ologo"
+        android:src="@drawable/ologo"
+        />
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Get Directions"
+        android:background="@color/secondary_darker"
+        android:id="@+id/directionsbutton"
+        android:textColor="@color/accent"
+        android:layout_below="@+id/ologo"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Photo Gallery"
+        android:background="@color/secondary_darker"
+        android:id="@+id/photogallerybutton"
+        android:onClick="openGallery"
+        android:textColor="@color/accent"
+        android:layout_alignTop="@+id/contacuserbutton"
+        android:layout_alignLeft="@+id/directionsbutton"
+        android:layout_alignStart="@+id/directionsbutton" />
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Contact User"
+        android:background="@color/secondary_darker"
+        android:id="@+id/contacuserbutton"
+        android:textColor="@color/accent"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Respond"
+        android:background="@color/secondary_darker"
+        android:id="@+id/respondbutton"
+        android:textColor="@color/accent"
+        android:onClick="alertUser"
+        android:layout_below="@+id/ologo"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>

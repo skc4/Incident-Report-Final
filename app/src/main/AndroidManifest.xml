@@ -15,6 +15,13 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="mobileproject.incidentreport.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <!--
+ The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but are recommended.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <!--
       IMPORTANT: Change "com.parse.starter.permission.C2D_MESSAGE" in the lines below
@@ -23,8 +30,6 @@
     <permission
         android:name="mobileproject.incidentreport.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
-
-    <uses-permission android:name="mobileproject.incidentreport.permission.C2D_MESSAGE" />
 
     <application
         android:name=".Incident_Report"
@@ -67,6 +72,10 @@
             android:label="@string/title_activity_officer__menu" >
         </activity>
         <activity
+            android:name=".Activities.IncidentMap"
+            android:label="@string/title_activity_incident_map" >
+        </activity>
+        <activity
             android:name=".Activities.Report_A_Incident"
             android:label="@string/title_activity_report__a__incident"
             android:parentActivityName=".Activities.User_Menu" >
@@ -101,9 +110,66 @@
         </receiver>
 
         <activity
-            android:name=".Activities.Dispatch_menu"
-            android:label="@string/title_activity_dispatch_menu"
+            android:name=".Activities.IncidentList"
+            android:label="@string/title_activity_incident_list"
             android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".Activities.DispatchToOfficer"
+            android:label="@string/title_activity_dispatch_to_officer"
+            android:parentActivityName=".Activities.IncidentList"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="mobileproject.incidentreport.Activities.IncidentList" />
+        </activity>
+        <activity
+            android:name=".Activities.Officer_Report"
+            android:label="@string/title_activity_officer__report"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".Activities.user_account_settings"
+            android:label="Account Settings" >
+        </activity>
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".Activities.Officer_Gallery"
+            android:label="@string/title_activity_officer__gallery"
+            android:theme="@style/AppTheme.NoActionBar1" >
+        </activity>
+
+        <activity
+            android:name=".helpers.ImageActivity"
+            android:label="ImageActivity"
+            android:theme="@style/AppTheme.NoActionBar1">
+
         </activity>
     </application>
 

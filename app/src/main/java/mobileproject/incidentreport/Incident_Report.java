@@ -8,8 +8,9 @@ import mobileproject.incidentreport.helpers.ParseHelper;
 /**
  * Created by rettwalker on 10/29/15.
  */
-public class Incident_Report extends Application {
+public class Incident_Report extends android.support.multidex.MultiDexApplication {
     private static Incident_Report instance;
+
 
     public void onCreate() {
         super.onCreate();
