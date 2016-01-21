@@ -53,24 +53,18 @@
 
 
     <string-array name="image_ids">
-        <item>@drawable/lambda_1</item>
-        <item>@drawable/lambda_2</item>
-        <item>@drawable/lambda_3</item>
-        <item>@drawable/lambda_4</item>
-        <item>@drawable/lambda_5</item>
-        <item>@drawable/lambda_6</item>
-        <item>@drawable/lambda_7</item>
-        <item>@drawable/lambda_8</item>
-        <item>@drawable/lambda_9</item>
-        <item>@drawable/lambda_1</item>
-        <item>@drawable/lambda_2</item>
-        <item>@drawable/lambda_3</item>
-        <item>@drawable/lambda_4</item>
-        <item>@drawable/lambda_5</item>
-        <item>@drawable/lambda_6</item>
-        <item>@drawable/lambda_7</item>
-        <item>@drawable/lambda_8</item>
-        <item>@drawable/lambda_9</item>
+        <item>@drawable/img1</item>
+        <item>@drawable/img2</item>
+        <item>@drawable/img3</item>
+        <item>@drawable/img4</item>
+        <item>@drawable/img5</item>
+        <item>@drawable/img6</item>
+        <!--<item>@drawable/img7</item>-->
+        <!--<item>@drawable/img8</item>-->
+        <item>@drawable/img1</item>
+        <item>@drawable/img2</item>
+        <item>@drawable/img3</item>
+
     </string-array>
 
 </resources>

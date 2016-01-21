@@ -47,7 +47,7 @@ public class Officer_Gallery extends AppCompatActivity {
             }
         });
 
-        }
+    }
 
     //Insert Data into the gridView Gallery
     private ArrayList<ImageItem> getData(){

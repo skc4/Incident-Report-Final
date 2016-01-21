@@ -315,8 +315,8 @@ public class Report_A_Incident extends AppCompatActivity implements
 
                 //Insert incident into tbl_incident
                 query= "INSERT INTO tbl_incidents (incident_id,longitude,latitude,description,strAddr)" +
-                        " VALUES('"+current_incident.getId()+"','"+current_incident.getLat()
-                        +"', '"+current_incident.getLongit()+"', '"+current_incident.getDescription()+"','"+current_incident.getStreetAddress()+"');";
+                        " VALUES('"+current_incident.getId()+"','"+current_incident.getLongit()
+                        +"', '"+current_incident.getLat()+"', '"+current_incident.getDescription()+"','"+current_incident.getStreetAddress()+"');";
                 st.executeUpdate(query);
 
                 query=" INSERT INTO tbl_incident_cat (incident_id,catogories_id)" +

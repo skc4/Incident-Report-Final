@@ -2,6 +2,9 @@ package mobileproject.incidentreport.Entities;
 
 import android.net.Uri;
 
+import com.google.android.gms.maps.model.LatLng;
+import com.google.maps.android.clustering.ClusterItem;
+
 import org.json.JSONObject;
 
 import java.io.Serializable;
@@ -11,7 +14,7 @@ import java.sql.Timestamp;
 /**
  * Created by rettwalker on 10/29/15.
  */
-public class Incident implements Serializable {
+public class Incident implements Serializable,ClusterItem {
     private double lat;
     private double longit;
     private Timestamp timestamp;
@@ -21,7 +24,7 @@ public class Incident implements Serializable {
     private String streetAddress;
     private String username;
     private boolean respondedTo = false;
-    private int catId;
+    private String category;
 
     public Incident(){
 
@@ -99,11 +102,16 @@ public class Incident implements Serializable {
         this.respondedTo = respondedTo;
     }
 
-    public int getCatId() {
-        return catId;
+    public String getCategory() {
+        return category;
     }
 
-    public void setCatId(int catId) {
-        this.catId = catId;
+    public void setCategory(String catId) {
+        this.category = catId;
+    }
+
+    @Override
+    public LatLng getPosition() {
+        return new LatLng(lat,longit);
     }
 }

@@ -57,6 +57,7 @@ public class DispatchToOfficer extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Officer officer = (Officer) officerlist.getItemAtPosition(position);
                 //new assignOfficer(officer.getOfficer_id()).execute();
+                new assignIncident(officer.getOfficer_id()).execute();
                 ParsePush push = new ParsePush();
                 push.setChannel(officer.getUsername());
                 JSONObject incidentOb = null;
@@ -164,6 +165,38 @@ public class DispatchToOfficer extends AppCompatActivity {
         }
     }
 
+    private class assignIncident extends AsyncTask<Void,Void,Void>
+    {   private int officerId;
+
+        public  assignIncident(int id)
+        {
+            officerId = id;
+        }
+        protected Void doInBackground(Void...params)
+        {
+            Intent intent = getIntent();
+            incident = (Incident) intent.getExtras().getSerializable("INCIDENT");
+            try
+            {
+                Class.forName("com.mysql.jdbc.Driver");
+                Connection con = DriverManager.getConnection(ConfigApp.database_url,ConfigApp.database_user,ConfigApp.database_pass);
+                String query = "Insert INTO tbl_officer_incident (incident,officer) VALUES (" + incident.getId() + "," + officerId + ");";
+                Statement st = con.createStatement();
+                st.executeUpdate(query);
+                con.close();
+            }
+            catch (Exception ex)
+            {
+                ex.printStackTrace();
+            }
+            return  null;
+        }
+
+        protected void postOnExecute(View v)
+        {
+
+        }
+    }
     /*
     private class assignOfficer extends AsyncTask<Void, Void, Void> {
         private int id;

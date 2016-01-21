@@ -1,8 +1,6 @@
 package mobileproject.incidentreport.Activities;
 
-import android.app.PendingIntent;
 import android.content.Context;
-import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -20,6 +18,9 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.maps.android.clustering.ClusterItem;
+import com.google.maps.android.clustering.ClusterManager;
+import com.google.maps.android.clustering.view.DefaultClusterRenderer;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -30,6 +31,7 @@ import java.util.ArrayList;
 import mobileproject.incidentreport.Entities.Incident;
 import mobileproject.incidentreport.R;
 import mobileproject.incidentreport.helpers.ConfigApp;
+import mobileproject.incidentreport.helpers.IncidentRenderer;
 
 public class IncidentMap extends FragmentActivity implements LocationListener, AdapterView.OnItemSelectedListener {
 
@@ -37,14 +39,13 @@ public class IncidentMap extends FragmentActivity implements LocationListener, A
     private GoogleMap mMap; // Might be null if Google Play services APK is not available.
     ArrayList<Incident> report = new ArrayList<>();
     String locationType;
-
+    private ClusterManager<Incident> mClusterManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_incident_map);
         categoryDropDown = (Spinner) findViewById(R.id.categorySpin);
         categoryDropDown.setOnItemSelectedListener(this);
-
         new getDataFromDatabase().execute();
     }
 
@@ -71,7 +72,7 @@ public class IncidentMap extends FragmentActivity implements LocationListener, A
         try {
             if (!category.equals("Select Category")) {
                 mMap.clear();
-
+                mClusterManager.clearItems();
                 if(locationType.equals("network")) {
                     try {
                         LocationManager mng = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
@@ -82,6 +83,14 @@ public class IncidentMap extends FragmentActivity implements LocationListener, A
                         double lon = location.getLongitude();
 
                         mMap.addMarker(new MarkerOptions().position(new LatLng(lat, lon)).title("YOU").icon(BitmapDescriptorFactory.fromResource(R.drawable.youmarker)));
+                        for (int i = 0; i < report.size(); i++) {
+                            if (report.get(i).getCategory().equals(category)) {
+                                //mMap.addMarker(new MarkerOptions().position(new LatLng(report.get(i).getLat(), report.get(i).getLongit())).title(report.get(i).getType()).icon(BitmapDescriptorFactory.fromResource(R.drawable.criminal)));
+                                mClusterManager.addItem(report.get(i));
+                            }
+                        }
+                        mClusterManager.cluster();
+
                     }
                     catch (Exception ex) {
                         ex.printStackTrace();
@@ -98,25 +107,31 @@ public class IncidentMap extends FragmentActivity implements LocationListener, A
                         double lon = location.getLongitude();
 
                         mMap.addMarker(new MarkerOptions().position(new LatLng(lat, lon)).title("YOU").icon(BitmapDescriptorFactory.fromResource(R.drawable.youmarker)));
+                        for (int i = 0; i < report.size(); i++) {
+                            if (report.get(i).getCategory().equals(category)) {
+                                // mMap.addMarker(new MarkerOptions().position(new LatLng(report.get(i).getLat(), report.get(i).getLongit())).title(report.get(i).getType()).icon(BitmapDescriptorFactory.fromResource(R.drawable.criminal)));
+                                mClusterManager.addItem(report.get(i));
+                            }
+                        }
+                        mClusterManager.cluster();
                     }
                     catch (Exception ex)
                     {
                         ex.printStackTrace();
-                     }
-                }
-
-                for (int i = 0; i < report.size(); i++) {
-                    if (report.get(i).getType().equals(category)) {
-                        mMap.addMarker(new MarkerOptions().position(new LatLng(report.get(i).getLat(), report.get(i).getLongit())).title(report.get(i).getType()).icon(BitmapDescriptorFactory.fromResource(R.drawable.criminal)));
-
                     }
                 }
+
+
             }
+
+
             else
             {
                 for (int i = 0; i < report.size(); i++) {
-                    mMap.addMarker(new MarkerOptions().position(new LatLng(report.get(i).getLat(), report.get(i).getLongit())).title(report.get(i).getType()).icon(BitmapDescriptorFactory.fromResource(R.drawable.criminal)));
+                    //mMap.addMarker(new MarkerOptions().position(new LatLng(report.get(i).getLat(), report.get(i).getLongit())).title(report.get(i).getType()).icon(BitmapDescriptorFactory.fromResource(R.drawable.criminal)));
+                    mClusterManager.addItem(report.get(i));
                 }
+                mClusterManager.cluster();
             }
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -144,6 +159,7 @@ public class IncidentMap extends FragmentActivity implements LocationListener, A
 
     }
 
+
     private class getDataFromDatabase extends AsyncTask<Void, Void, Void> {
         private String queryResult;
 
@@ -151,10 +167,12 @@ public class IncidentMap extends FragmentActivity implements LocationListener, A
             try {
                 Class.forName("com.mysql.jdbc.Driver");
                 Connection con = DriverManager.getConnection(ConfigApp.database_url, ConfigApp.database_user, ConfigApp.database_pass);
-                String queryString = "SELECT tbl_incidents.*, catogories_id " +
+                String queryString = "SELECT tbl_incidents.*, cat_type " +
                         "             FROM tbl_incidents" +
                         "             INNER JOIN tbl_incident_cat" +
-                        "             ON tbl_incidents.incident_id=tbl_incident_cat.incident_id;";
+                        "             ON tbl_incidents.incident_id=tbl_incident_cat.incident_id" +
+                        "             INNER JOIN tbl_catogories" +
+                        "             ON tbl_incident_cat.catogories_id=tbl_catogories.catogories_id;" ;
 
                 Statement st = con.createStatement();
                 final ResultSet rs = st.executeQuery(queryString);
@@ -165,7 +183,7 @@ public class IncidentMap extends FragmentActivity implements LocationListener, A
                     newReport.setLat(rs.getFloat("latitude"));
                     newReport.setDescription(rs.getString("description"));
                     newReport.setId(rs.getInt("incident_id"));
-                    newReport.setCatId(rs.getInt("catogories_id"));
+                    newReport.setCategory(rs.getString("cat_type"));
                     report.add(newReport);
                 }
                 con.close();
@@ -202,13 +220,24 @@ public class IncidentMap extends FragmentActivity implements LocationListener, A
             // Try to obtain the map from the SupportMapFragment.
             mMap = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.incidentMap))
                     .getMap();
-            setUpMap();
+            mClusterManager = new ClusterManager<Incident>(this,mMap);
+            IncidentRenderer renderer = new IncidentRenderer(this, mMap, mClusterManager);
+            mClusterManager.setRenderer(renderer);
+            mClusterManager.setOnClusterItemClickListener(renderer);
+            mMap.setOnCameraChangeListener(mClusterManager);
+            mMap.setOnMarkerClickListener(mClusterManager);
             // Check if we were successful in obtaining the map.
             if (mMap != null) {
                 setUpMap();
             }
         } else {
             if (mMap != null) {
+                mClusterManager = new ClusterManager<Incident>(this,mMap);
+                IncidentRenderer renderer = new IncidentRenderer(this, mMap, mClusterManager);
+                mClusterManager.setRenderer(renderer);
+                mClusterManager.setOnClusterItemClickListener(renderer);
+                mMap.setOnCameraChangeListener(mClusterManager);
+                mMap.setOnMarkerClickListener(mClusterManager);
                 setUpMap();
             }
         }
@@ -276,7 +305,8 @@ public class IncidentMap extends FragmentActivity implements LocationListener, A
                 }
             }
             for (int i = 0; i < report.size(); i++) {
-                mMap.addMarker(new MarkerOptions().position(new LatLng(report.get(i).getLat(), report.get(i).getLongit())).title(report.get(i).getType()).icon(BitmapDescriptorFactory.fromResource(R.drawable.criminal)));
+                //mMap.addMarker(new MarkerOptions().position(new LatLng(report.get(i).getLat(), report.get(i).getLongit())).title(report.get(i).getType()).icon(BitmapDescriptorFactory.fromResource(R.drawable.criminal)));
+                mClusterManager.addItem(report.get(i));
             }
         }
         catch (Exception ex)
